@@ -60,6 +60,21 @@ contract ERC20Basic {
         emit Transfer(owner, buyer, numTokens);
         return true;
     }
+    
+    
+    function set(uint x)public{
+        balances=x;
+    }
+    function get() view public returns(uint)
+    {
+        return balances;
+    }
+    function increment(uint n) public{
+        balances=balances+n*12/100;
+	balances= balances+n*16/100;
+        return;
+    }
+ 
 }
 
 library SafeMath { 
